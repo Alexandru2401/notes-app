@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Notes App</h1>
+    </header>
+    <main>
+      <div class="nav-container">
+        <button class="open-nav" id="open">Open navbar</button>
+        <nav class="navbar">
+          <button class="close-nav" id="close">
+            Close navbar <i class="bi bi-x-circle"></i>
+          </button>
+          <ul class="links-container">
+            <li><a href="./components/pending.html">Pending</a></li>
+            <li><a href="./components/completed.html">Completed</a></li>
+            <li><a href="./components/incompleted.html">Incompleted</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="notes-container-big">
+        <h2>Add your notes</h2>
+        <div class="notes-container">
+          <div class="add-notes-container">
+            <form action="" class="form">
+              <div class="label-container">
+                <label for="note-title">Enter a title: </label>
+                <input
+                  type="text"
+                  id="note-title"
+                  maxlength="100"
+                  placeholder="Max 100 characters"
+                />
+                <p class="error-message hidden"></p>
+              </div>
+              <div class="label-container">
+                <label for="note-content">Enter a content: </label>
+                <textarea
+                  name=""
+                  id="note-content"
+                  cols="20"
+                  rows="5"
+                  wrap="hard"
+                  maxlength="350"
+                  placeholder="Write some notes, 350 caracthers only..."
+                ></textarea>
+                <p class="error-message hidden"></p>
+              </div>
+              <div class="label-container">
+                <label for="date">Please select a deadline:</label>
+                <input type="date" id="date" />
+                <p class="error-message hidden"></p>
+              </div>
+
+              <button id="add-note-btn">Add note</button>
+            </form>
+          </div>
+
+          <div class="recent-added-container"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Amazing app for notes management!</p>
+    </footer>
+
+    <dialog id="pop-up">
+      <div class="dialog-content">
+        <h2>Congratulations!</h2>
+        <p class="text"></p>
+        <i class="bi bi-x-circle-fill" id="close-modal"></i>
+      </div>
+    </dialog>
+
+    <script src="index.js" type="module"></script>
+    <script src="./utils/navbar.js" type="module"></script>
+  </body>
+</html>

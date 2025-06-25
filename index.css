@@ -1,0 +1,259 @@
+/* General styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 50px 20px;
+  background-color: aliceblue;
+  min-height: 20vh;
+}
+
+main {
+  padding: 50px 20px;
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: #fff287;
+}
+
+footer {
+  min-height: 10vh;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+button {
+  width: 160px;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ffeea9;
+}
+
+button.add-btn {
+  background-color: #a4dd00;
+}
+
+button.delete-btn {
+  background-color: #dc2525;
+}
+
+label {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.wrong {
+  border: 1px solid red;
+}
+
+.good {
+  border: 1px solid green;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Navbar style */
+.nav-container {
+  border: 1px solid black;
+  position: relative;
+}
+
+.links-container a {
+  margin-bottom: 1px solid red;
+  color: black;
+}
+
+.links-container li {
+  padding: 10px 0;
+  font-size: 20px;
+  list-style: none;
+}
+
+#open {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/* Notes container style */
+.notes-container-big {
+  background-color: #ffc107;
+  padding: 20px;
+}
+
+.notes-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+}
+
+.notes-container-secondary-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.notes-container-pending-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.notes-container-incompleted-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.notes-container-incompleted-page .recent-note {
+  max-width: 30%;
+}
+
+
+
+.notes-container-pending-page .recent-note {
+  max-width: 30%;
+}
+
+.notes-container-secondary-page .recent-note {
+  max-width: 30%;
+}
+
+.add-notes-container {
+  display: flex;
+  flex: 1;
+}
+
+.recent-added-container {
+  flex: 1;
+  min-width: 0; /* 🔥 critic */
+  overflow-wrap: break-word;
+}
+
+.recent-note {
+  background-color: aliceblue;
+  padding: 20px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 100%; /* Ocupă toată lățimea părintelui */
+  max-width: 100%; /* Nu se lărgește peste container */
+  word-wrap: break-word; /* Rupe cuvintele lungi */
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.recent-note p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.recent-note span {
+  display: block;
+  word-break: break-word;
+  color: #ffc107;
+}
+
+.recent-note h3 {
+  color: black;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.form button {
+  align-self: center;
+  margin: 20px 0;
+}
+
+/* Calendar style */
+.calendar-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.calendar-container > input {
+  width: 50%;
+}
+
+/* Dialog */
+#pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  height: 250px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.dialog-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#close-modal {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: black; /* fundal negru */
+  color: white; /* X alb */
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%; /* face butonul rotund */
+  padding: 2px 2px; /* spațiu în jurul iconiței */
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#close-modal:hover {
+  color: red;
+}
+
+/* Label container */
+.label-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 94px;
+}
+
+.label-container:has(textarea) {
+  min-height: 154px;
+}
